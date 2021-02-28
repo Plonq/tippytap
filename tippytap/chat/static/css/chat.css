@@ -1,0 +1,73 @@
+.chat {
+    height: 100vh;
+    width: 100vw;
+    background-color: lightgray;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat .conversation {
+    background-color: white;
+    border-radius: 8px;
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 8px;
+    overflow-y: auto;
+}
+
+.chat .conversation .message {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.chat .conversation .message.me {
+    flex-direction: row-reverse;
+}
+
+.chat .conversation .message .user {
+    margin-left: 8px;
+    margin-right: 8px;
+    font-size: 12px;
+}
+
+.chat .conversation .message .message-content {
+    display: inline-block;
+    background-color: forestgreen;
+    padding: 8px 12px;
+    border-radius: 8px;
+    color: white;
+}
+
+.chat .conversation .message.me .message-content {
+    /*margin-left: auto;*/
+    background-color: dodgerblue;
+}
+
+.chat .composer {
+    display: flex;
+    align-items: center;
+    height: 48px;
+}
+
+.chat .composer .input {
+    padding: 8px 12px;
+    width: 100%;
+    border-width: 1px;
+    border-radius: 4px;
+}
+
+.chat .composer .send {
+    padding: 8px 12px;
+    margin-left: 8px;
+    border-width: 1px;
+    border-radius: 4px;
+    background-color: dodgerblue;
+    color: white;
+}
+
+.chat .composer .send:active {
+    background-color: mediumblue;
+}
