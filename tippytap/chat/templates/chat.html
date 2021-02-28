@@ -8,7 +8,7 @@
 {% block body %}
   <script src="{% static 'js/chat.js' %}"></script>
 
-  <div class="chat" data-controller="chat" data-reflex-root=".chat" data-action="force:update->chat#reload">
+  <div class="chat" data-controller="chat" data-reflex-root=".chat">
     <div class="conversation">
       {% for message in messages %}
         {% if message.user.id == user_id %}

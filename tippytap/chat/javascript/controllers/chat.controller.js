@@ -16,10 +16,5 @@ export class ChatController extends BaseController {
       this.messageTarget.focus()
     })
   }
-
-  reload() {
-    console.log('reload')
-    this.stimulate("ChatReflex#reload")
-  }
 }
 
