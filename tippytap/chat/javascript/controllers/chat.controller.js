@@ -11,6 +11,7 @@ export class ChatController extends BaseController {
       return;
     }
     console.log("Sending message:", text)
+    console.log("this", this)
     this.stimulate('ChatReflex#new_message', text).then(() => {
       this.formTarget.reset()
       this.messageTarget.focus()

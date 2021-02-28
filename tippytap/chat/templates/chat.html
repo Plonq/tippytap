@@ -19,7 +19,7 @@
       {% endfor %}
     </div>
     <form class="composer" data-chat-target="form">
-        <input class="input" type="text" placeholder="Type a message" autofocus data-chat-target="message"/>
+        <input class="input" type="text" name="text" autocomplete="false" placeholder="Type a message" autofocus data-chat-target="message"/>
         <button class="send" type="submit" data-action="click->chat#newMessage">Send</button>
     </form>
   </div>
