@@ -11,7 +11,11 @@
   <div class="chat" data-controller="chat" data-reflex-root=".chat" data-action="force:update->chat#reload">
     <div class="conversation">
       {% for message in messages %}
-        {% include 'chat_message.html' %}
+        {% if message.user.id == user_id %}
+          {% include 'my_chat_message.html' %}
+        {% else %}
+          {% include 'chat_message.html' %}
+        {% endif %}
       {% endfor %}
     </div>
     <form class="composer" data-chat-target="form">

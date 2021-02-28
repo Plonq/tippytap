@@ -1,6 +1,6 @@
-<div class="message{% if message.user.id == user_id %} me{% endif %}">
+<div class="message">
+  <div class="user">User {{ message.user.id }}</div>
   <div class="message-content">
     {{ message.text }}
   </div>
-  <div class="user">User {{ message.user.id }}</div>
 </div>
